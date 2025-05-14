@@ -82,8 +82,7 @@ if __name__ == "__main__":
     args = get_args_parser()
     check_and_create_folder(args.output_dir)
     
-    openai_api_key = "<your_openai_api_key>"
-    client = OpenAI(api_key=openai_api_key)
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
     # the parameter setting used in the original paper
     model_name = "gpt-4o-2024-11-20"
